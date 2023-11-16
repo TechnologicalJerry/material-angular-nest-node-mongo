@@ -11,7 +11,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ],
   imports: [
     BrowserModule,
-    MaterialModule,
     AppRoutingModule,
     MatSlideToggleModule,
     BrowserAnimationsModule,
