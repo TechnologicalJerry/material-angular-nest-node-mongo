@@ -1,0 +1,376 @@
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  
+  .mat-mdc-toolbar {
+    background: transparent;
+    padding: 0;
+    min-height: 70px;
+    position: relative;
+    overflow: hidden;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+      opacity: 0.3;
+    }
+    
+    .header-container {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      position: relative;
+      z-index: 1;
+      height: 70px;
+      
+      // Logo Section
+      .logo-section {
+        .logo-link {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          text-decoration: none;
+          color: white;
+          font-size: 1.5rem;
+          font-weight: 700;
+          padding: 8px 16px;
+          border-radius: 12px;
+          transition: all 0.3s ease;
+          
+          &:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+          }
+          
+          .logo-icon {
+            font-size: 2rem;
+            width: 2rem;
+            height: 2rem;
+            color: #ffd700;
+          }
+          
+          .logo-text {
+            font-family: 'Roboto', sans-serif;
+            letter-spacing: 1px;
+          }
+        }
+      }
+      
+      // Navigation Section
+      .nav-section {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-left: 40px;
+        
+        .nav-button {
+          color: white;
+          font-weight: 500;
+          padding: 10px 16px;
+          border-radius: 8px;
+          transition: all 0.3s ease;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          min-height: 40px;
+          
+          &:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+          }
+          
+          .mat-icon {
+            font-size: 1.2rem;
+            width: 1.2rem;
+            height: 1.2rem;
+          }
+          
+          span {
+            font-size: 0.95rem;
+          }
+        }
+      }
+      
+      // Spacer
+      .spacer {
+        flex: 1;
+      }
+      
+      // Auth Section
+      .auth-section {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        
+        .auth-button {
+          padding: 10px 20px;
+          border-radius: 25px;
+          font-weight: 600;
+          transition: all 0.3s ease;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          min-width: 120px;
+          justify-content: center;
+          min-height: 40px;
+          
+          &.signin-btn {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            
+            &:hover {
+              background: rgba(255, 255, 255, 0.2);
+              transform: translateY(-2px);
+              box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            }
+          }
+          
+          &.signup-btn {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+            
+            &:hover {
+              transform: translateY(-2px);
+              box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6);
+            }
+          }
+          
+          .mat-icon {
+            font-size: 1.1rem;
+            width: 1.1rem;
+            height: 1.1rem;
+          }
+          
+          span {
+            font-size: 0.95rem;
+          }
+        }
+        
+        .user-menu-button {
+          color: white;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          background: rgba(255, 255, 255, 0.1);
+          border: 2px solid rgba(255, 255, 255, 0.2);
+          transition: all 0.3s ease;
+          
+          &:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+          }
+          
+          .mat-icon {
+            font-size: 1.5rem;
+            width: 1.5rem;
+            height: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// User Menu Styles
+.user-menu {
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  min-width: 200px;
+  
+  .menu-header {
+    padding: 16px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 600;
+    
+    .mat-icon {
+      color: #ffd700;
+    }
+  }
+  
+  .menu-item {
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+    color: #333;
+    
+    &:hover {
+      background: #f8f9fa;
+      color: #667eea;
+    }
+    
+    &.logout-item {
+      color: #dc3545;
+      
+      &:hover {
+        background: #f8d7da;
+        color: #721c24;
+      }
+    }
+    
+    .mat-icon {
+      color: #667eea;
+      font-size: 1.2rem;
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+    
+    &.logout-item .mat-icon {
+      color: #dc3545;
+    }
+    
+    span {
+      font-weight: 500;
+    }
+  }
+  
+  .mat-mdc-divider {
+    margin: 8px 0;
+    border-color: #e9ecef;
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .app-header {
+    .mat-mdc-toolbar {
+      min-height: 60px;
+      
+      .header-container {
+        padding: 0 15px;
+        height: 60px;
+        
+        .logo-section {
+          .logo-link {
+            font-size: 1.3rem;
+            padding: 6px 12px;
+            
+            .logo-icon {
+              font-size: 1.5rem;
+              width: 1.5rem;
+              height: 1.5rem;
+            }
+          }
+        }
+        
+        .nav-section {
+          display: none; // Hide navigation on mobile
+        }
+        
+        .auth-section {
+          gap: 8px;
+          
+          .auth-button {
+            padding: 8px 16px;
+            min-width: 100px;
+            font-size: 0.9rem;
+            min-height: 36px;
+            
+            .mat-icon {
+              font-size: 1rem;
+              width: 1rem;
+              height: 1rem;
+            }
+            
+            span {
+              font-size: 0.85rem;
+            }
+          }
+          
+          .user-menu-button {
+            width: 45px;
+            height: 45px;
+            
+            .mat-icon {
+              font-size: 1.3rem;
+              width: 1.3rem;
+              height: 1.3rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .app-header {
+    .mat-mdc-toolbar {
+      .header-container {
+        padding: 0 10px;
+        
+        .logo-section {
+          .logo-link {
+            font-size: 1.2rem;
+            padding: 4px 8px;
+            
+            .logo-text {
+              display: none; // Hide text on very small screens
+            }
+          }
+        }
+        
+        .auth-section {
+          .auth-button {
+            padding: 6px 12px;
+            min-width: 80px;
+            font-size: 0.8rem;
+            
+            span {
+              display: none; // Hide text on very small screens
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Animation for header elements
+.logo-link,
+.nav-button,
+.auth-button,
+.user-menu-button {
+  animation: slideInDown 0.6s ease-out;
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Staggered animation for nav items
+.nav-button:nth-child(1) { animation-delay: 0.1s; }
+.nav-button:nth-child(2) { animation-delay: 0.2s; }
+.auth-button:nth-child(1) { animation-delay: 0.3s; }
+.auth-button:nth-child(2) { animation-delay: 0.4s; }
+.user-menu-button { animation-delay: 0.5s; }
