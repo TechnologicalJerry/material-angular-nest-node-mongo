@@ -1,1 +1,180 @@
-<p>footer works!</p>
+<footer class="app-footer">
+  <mat-toolbar color="primary" class="footer-toolbar">
+    <div class="footer-content">
+      <!-- Main Footer Content -->
+      <div class="footer-main">
+        <!-- Brand Section -->
+        <div class="footer-brand">
+          <mat-card class="brand-card">
+            <mat-card-content>
+              <div class="brand-content">
+                <div class="brand-logo">
+                  <mat-icon>dashboard</mat-icon>
+                  <span class="brand-name">My App</span>
+                </div>
+                <p class="brand-description">
+                  Building the future with modern web technologies.
+                  Secure, fast, and reliable solutions for your business needs.
+                </p>
+                <div class="social-links">
+                  <button mat-icon-button color="accent" aria-label="Twitter">
+                    <mat-icon>share</mat-icon>
+                  </button>
+                  <button mat-icon-button color="accent" aria-label="GitHub">
+                    <mat-icon>code</mat-icon>
+                  </button>
+                  <button mat-icon-button color="accent" aria-label="LinkedIn">
+                    <mat-icon>work</mat-icon>
+                  </button>
+                  <button mat-icon-button color="accent" aria-label="Email">
+                    <mat-icon>email</mat-icon>
+                  </button>
+                </div>
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+
+        <!-- Links Sections -->
+        <div class="footer-links">
+          <mat-card class="links-card">
+            <mat-card-header>
+              <mat-card-title>
+                <mat-icon>extension</mat-icon>
+                Product
+              </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <mat-list>
+                <mat-list-item>
+                  <button mat-button routerLink="/features">
+                    <mat-icon matListItemIcon>star</mat-icon>
+                    Features
+                  </button>
+                </mat-list-item>
+                <mat-list-item>
+                  <button mat-button routerLink="/pricing">
+                    <mat-icon matListItemIcon>attach_money</mat-icon>
+                    Pricing
+                  </button>
+                </mat-list-item>
+                <mat-list-item>
+                  <button mat-button routerLink="/security">
+                    <mat-icon matListItemIcon>security</mat-icon>
+                    Security
+                  </button>
+                </mat-list-item>
+                <mat-list-item>
+                  <button mat-button routerLink="/api">
+                    <mat-icon matListItemIcon>api</mat-icon>
+                    API
+                  </button>
+                </mat-list-item>
+              </mat-list>
+            </mat-card-content>
+          </mat-card>
+
+          <mat-card class="links-card">
+            <mat-card-header>
+              <mat-card-title>
+                <mat-icon>business</mat-icon>
+                Company
+              </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <mat-list>
+                <mat-list-item>
+                  <button mat-button routerLink="/about">
+                    <mat-icon matListItemIcon>info</mat-icon>
+                    About
+                  </button>
+                </mat-list-item>
+                <mat-list-item>
+                  <button mat-button routerLink="/careers">
+                    <mat-icon matListItemIcon>work</mat-icon>
+                    Careers
+                  </button>
+                </mat-list-item>
+                <mat-list-item>
+                  <button mat-button routerLink="/blog">
+                    <mat-icon matListItemIcon>article</mat-icon>
+                    Blog
+                  </button>
+                </mat-list-item>
+                <mat-list-item>
+                  <button mat-button routerLink="/contact">
+                    <mat-icon matListItemIcon>contact_mail</mat-icon>
+                    Contact
+                  </button>
+                </mat-list-item>
+              </mat-list>
+            </mat-card-content>
+          </mat-card>
+
+          <mat-card class="links-card">
+            <mat-card-header>
+              <mat-card-title>
+                <mat-icon>support</mat-icon>
+                Support
+              </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <mat-list>
+                <mat-list-item>
+                  <button mat-button routerLink="/help">
+                    <mat-icon matListItemIcon>help</mat-icon>
+                    Help Center
+                  </button>
+                </mat-list-item>
+                <mat-list-item>
+                  <button mat-button routerLink="/docs">
+                    <mat-icon matListItemIcon>description</mat-icon>
+                    Documentation
+                  </button>
+                </mat-list-item>
+                <mat-list-item>
+                  <button mat-button routerLink="/status">
+                    <mat-icon matListItemIcon>monitor_heart</mat-icon>
+                    Status
+                  </button>
+                </mat-list-item>
+                <mat-list-item>
+                  <button mat-button routerLink="/community">
+                    <mat-icon matListItemIcon>groups</mat-icon>
+                    Community
+                  </button>
+                </mat-list-item>
+              </mat-list>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+
+      <mat-divider></mat-divider>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <div class="copyright">
+            <mat-icon>copyright</mat-icon>
+            <span>2024 My App. All rights reserved.</span>
+          </div>
+          <div class="legal-links">
+            <button mat-button routerLink="/privacy">
+              <mat-icon>privacy_tip</mat-icon>
+              Privacy Policy
+            </button>
+            <button mat-button routerLink="/terms">
+              <mat-icon>gavel</mat-icon>
+              Terms of Service
+            </button>
+            <button mat-button routerLink="/cookies">
+              <mat-icon>cookie</mat-icon>
+              Cookie Policy
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-toolbar>
+</footer>
