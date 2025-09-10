@@ -5,7 +5,7 @@ import { tap } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { User } from '../models/user.model';
 import { AuthResponse } from '../models/auth-response.model';
-import { StorageService } from './storage.service';
+import { StorageService } from './storage';
 
 @Injectable({
   providedIn: 'root'
@@ -24,6 +24,14 @@ export class AuthService {
 
   login(credentials: any): Observable<AuthResponse> {
     return this.http.post<AuthResponse>('/api/login', credentials).pipe(
+      tap(response => {
+        this.handleAuth(response);
+      })
+    );
+  }
+
+  signup(userData: any): Observable<AuthResponse> {
+    return this.http.post<AuthResponse>('/api/signup', userData).pipe(
       tap(response => {
         this.handleAuth(response);
       })
@@ -51,5 +59,9 @@ export class AuthService {
 
   isLoggedIn(): boolean {
     return !!this.userSubject.value;
+  }
+
+  getCurrentUser(): User | null {
+    return this.userSubject.value;
   }
 }
