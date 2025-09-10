@@ -1,13 +1,26 @@
 import { Component, inject } from '@angular/core';
-import { AuthService } from '../../../core/services/auth';
-import { Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { Router, RouterModule } from '@angular/router';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatDividerModule } from '@angular/material/divider';
+import { AuthService } from '../../../core/services/auth';
 
 @Component({
   selector: 'app-header',
-  imports: [CommonModule, RouterModule],
-  templateUrl: './header.html',
-  styleUrl: './header.scss'
+  standalone: true,
+  imports: [
+    CommonModule, 
+    RouterModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule,
+    MatMenuModule,
+    MatDividerModule
+  ],
+  templateUrl: './header.html'
 })
 export class Header {
   private authService = inject(AuthService);
