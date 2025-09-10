@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import { NotFound } from './shared/components/not-found/not-found';
 import { authGuard } from './core/guards/auth.guard';
 import { noAuthGuard } from './core/guards/no-auth.guard';
 
@@ -23,5 +22,8 @@ export const routes: Routes = [
         path: 'about',
         loadComponent: () => import('./features/about/about/about').then(m => m.About),
     },
-    { path: '**', component: NotFound }
+    {
+        path: '**',
+        loadComponent: () => import('./shared/components/not-found/not-found').then(m => m.NotFound)
+    }
 ];
